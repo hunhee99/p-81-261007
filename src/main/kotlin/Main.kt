@@ -1,7 +1,8 @@
-fun main() {
-    // 문자열 템플릿
-    val name = "Alice"
-    val age = 25
+import java.io.File
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
 
-    println("안녕하세요. 저는 ${name}입니다. 나이는 ${age}살입니다.")
+fun main() {
+    // 예외 처리
+    Files.copy(File("a.txt").toPath(), File("a_copy.txt").toPath(), StandardCopyOption.REPLACE_EXISTING)
 }
