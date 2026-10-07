@@ -1,22 +1,13 @@
 fun main() {
-    // null 처리
-    // null일수도 있는 변수에는 ?를 통해 명시해야함
-    val name: String? = null
+    // data class 사용
+    val p1 = Person("Alice", 25)
+    val p2 = Person("Alice", 25)
 
-    // elvis 연산자 ?: (null이라면 오른쪽 값 선택)
-    println(name?.length ?: "Name is null")
+    // 주소값이 아닌 실제 데이터 비교
+    // equals() 메서드와 동일
+    println(p1 == p2)
 
-    val name1: String = "John"
-    val name2: String? = null
-
-    println(name1.length)
-
-    // Java식 null 처리
-    if (name2 != null) {
-        println(name2.length)
-    }
-
-    // Kotlin식 null 처리
-    println(name2?.length)
+    // 자동 생성된 toString() 메서드 사용
+    println(p1)
 }
 
