@@ -1,21 +1,22 @@
 fun main() {
+    // null 처리
+    // null일수도 있는 변수에는 ?를 통해 명시해야함
+    val name: String? = null
 
-    val agesImmutable = mapOf<String, Int>("Peter" to 24, "Clark" to 31, "Bruce" to 32)
+    // elvis 연산자 ?: (null이라면 오른쪽 값 선택)
+    println(name?.length ?: "Name is null")
 
-    for ((key, value) in agesImmutable) {
-        println("$key is $value years old")
+    val name1: String = "John"
+    val name2: String? = null
+
+    println(name1.length)
+
+    // Java식 null 처리
+    if (name2 != null) {
+        println(name2.length)
     }
 
-    println("-------------------------------------")
-
-    val ages = mutableMapOf<String, Int>("Peter" to 24, "Clark" to 31, "Bruce" to 32)
-
-    // key: value 추가
-    ages["Barry"] = 25
-
-    for ((key, value) in ages) {
-        println("$key is $value years old")
-    }
-
+    // Kotlin식 null 처리
+    println(name2?.length)
 }
 
