@@ -9,7 +9,7 @@ fun main() {
     names.add("Daniel")
 
     for (name in names){
-        println(name)
+        println("Hello $name")
     }
 }
 
