@@ -1,20 +1,19 @@
 fun main() {
-    val result = add(5, 10)
-    val result2 = add2(1, 2)
-    val result3 = add3(3, 4)
+    // 자바로 만든 객체도 사용 가능
+    val personJava = Person("Java")
+    // 코틀린으로 만든 객체
+    val personKotlin = PersonKotlin("Kotlin")
 
-    println("Result = $result")
-    println("Result2 = $result2")
-    println("Result3 = $result3")
+    personJava.greet()
+    personKotlin.greet()
 }
 
-// 리턴 타입 명시
-fun add(a: Int, b: Int): Int {
-    return a + b
+
+class PersonKotlin(
+    val name: String
+) {
+    fun greet() {
+        println("Hello, my name is $name")
+    }
 }
 
-// 리턴 타입 명시, 표현식으로 작성
-fun add2(a: Int, b: Int): Int = a + b
-
-// 표현식으로 작성
-fun add3(a: Int, b: Int) = a + b
