@@ -1,13 +1,13 @@
 fun main() {
-    // data class 사용
-    val p1 = Person("Alice", 25)
-    val p2 = Person("Alice", 25)
+    // 람다 표현식
+    val names = listOf("Alice", "Bob", "Charlie")
 
-    // 주소값이 아닌 실제 데이터 비교
-    // equals() 메서드와 동일
-    println(p1 == p2)
+    // 매개변수 표현
+    names.forEach { name -> println(name)}
 
-    // 자동 생성된 toString() 메서드 사용
-    println(p1)
+    println("----------------")
+
+    // 매개변수 it으로 대체
+    names.forEach{println(it)}
 }
 
