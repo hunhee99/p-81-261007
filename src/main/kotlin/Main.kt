@@ -1,11 +1,6 @@
 fun main() {
     val number = 10
-    var message = "Hello, Java!"
-
-    // val은 상수
-    // number = 20
-
-    println("Number: ${number}")
-    println("Message: ${message}")
+    val str = if(number % 2 == 0) "Even" else "Odd"
+    println(str)
 }
 
