@@ -1,31 +1,14 @@
 fun main() {
-    // 확장 함수
-    val name: String = "Alice"
-    val intList = listOf(1, 2, 3, 4, 5)
+    // 기본 매개변수
 
-    // 추가한 확장 함수: greet()
-    name.greet()    // Hello, Alice
+    // 기본값 적용
+    sayHello()
 
-    println("--------------------")
-
-    // 기본 제공 메서드
-    val rst = intList.average()
-    println(rst)
-
-    println("--------------------")
-    
-    // 추가한 확장 함수: square()
-    val squaredIntList = intList.square()
-    squaredIntList.forEach { println(it) }
+    // Alice를 인자로 함수 호출
+    sayHello("Alice")
 }
 
-// String 클래스에 greet 확장 함수 추가
-fun String.greet(){
-    println("Hello, $this")
-}
-
-// Int List 클래스에 square 확장 함수 추가
-fun List<Int>.square(): List<Int> {
-    val rst = this.map{ it * it }
-    return rst
+// 매개변수에 디폴트 값을 설정하여 오버로딩 없이 사용 가능
+fun sayHello(name: String = "Guest"){
+    println("Hello $name")
 }
