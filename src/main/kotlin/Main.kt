@@ -1,8 +1,13 @@
-import java.io.File
-import java.nio.file.Files
-import java.nio.file.StandardCopyOption
-
 fun main() {
-    // 예외 처리
-    Files.copy(File("a.txt").toPath(), File("a_copy.txt").toPath(), StandardCopyOption.REPLACE_EXISTING)
+    // when 문 (switch 대체)
+    val day = 3
+
+    val dayName = when (day) {
+        1 -> "Monday"
+        2 -> "Tuesday"
+        3 -> "Wednesday"
+        else -> "Invalid Day"
+    }
+
+    println("Day: $dayName")
 }
