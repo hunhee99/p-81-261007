@@ -10,6 +10,7 @@ fun main() {
 
     val ages = mutableMapOf<String, Int>("Peter" to 24, "Clark" to 31, "Bruce" to 32)
 
+    // key: value 추가
     ages["Barry"] = 25
 
     for ((key, value) in ages) {
