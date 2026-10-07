@@ -1,15 +1,20 @@
 fun main() {
-    // immutable 리스트 (원소 추가 불가) [불변이 기본]
-    // val names = listOf("Alice", "Bob", "Charlie")
 
-    // mutable 리스트 (원소 추가 가능)
-    val names = mutableListOf<String>("Alice", "Bob", "Charlie")
+    val agesImmutable = mapOf<String, Int>("Peter" to 24, "Clark" to 31, "Bruce" to 32)
 
-    // 원소 추가
-    names.add("Daniel")
-
-    for (name in names){
-        println("Hello $name")
+    for ((key, value) in agesImmutable) {
+        println("$key is $value years old")
     }
+
+    println("-------------------------------------")
+
+    val ages = mutableMapOf<String, Int>("Peter" to 24, "Clark" to 31, "Bruce" to 32)
+
+    ages["Barry"] = 25
+
+    for ((key, value) in ages) {
+        println("$key is $value years old")
+    }
+
 }
 
