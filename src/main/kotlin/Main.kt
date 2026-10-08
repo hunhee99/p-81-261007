@@ -1,9 +1,6 @@
 fun main() {
-    // Companion Object
+    // open 키워드
 
-    MathUtil.square(5)
-        .also(::println)
-
-    MathUtil.PI
-        .also(::println)
+    val dog = Dog()
+    dog.makeSound()
 }
