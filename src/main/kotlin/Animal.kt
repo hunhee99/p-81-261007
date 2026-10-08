@@ -1,5 +1,3 @@
-open class Animal {
-    open fun makeSound() {
-        println("Some generic animal sound.")
-    }
+interface Animal {
+    fun makeSound()
 }
