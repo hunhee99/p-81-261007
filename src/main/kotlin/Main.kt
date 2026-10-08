@@ -1,7 +1,10 @@
 fun main() {
-    // lateinit
-    val example = Example()
-    example.value = "hi"
+    // lazy
+    println(lazyValue)
+    println(lazyValue)
+}
 
-    println(example.value.length)
+val lazyValue: String by lazy {
+    println("initializing")
+    "Hello"
 }
