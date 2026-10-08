@@ -1,10 +1,9 @@
 fun main() {
-    // lazy
-    println(lazyValue)
-    println(lazyValue)
-}
+    // Companion Object
 
-val lazyValue: String by lazy {
-    println("initializing")
-    "Hello"
+    MathUtil.square(5)
+        .also(::println)
+
+    MathUtil.PI
+        .also(::println)
 }
