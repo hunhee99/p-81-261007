@@ -1,15 +1,13 @@
 fun main() {
     // 스코프 함수
-    // apply => this를 받고 객체를 반환
-    // let => it를 받고 람다의 결과를 반환
-    // also => it를 받고 객체를 반환
-    // run => this를 받고 람다의 결과를 반환
+    // with
+    val p1 = Person("Alice", 25, 55.5, 3000)
 
-    // run
-    val num = 5
-    val rst = num.run {
-        this * 2 + 10
+    with(p1) {
+        increaseAge(5)
+        increaseWeight(3.5)
+        increaseSalary(10000)
     }
 
-    println(rst)
+    p1.getInfo()
 }
