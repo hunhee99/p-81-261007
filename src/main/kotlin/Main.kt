@@ -1,15 +1,14 @@
 fun main() {
     // 스코프 함수
+    // also -> 읽기 전용...
 
-    val name: String? = "hello"
+    val length = "Hello"
+        .also {
+            println("Before: $it")
+        }.uppercase()
+        .also {
+            println("After: $it")
+        }.length
 
-    val len = name?.length ?: 0
-    println(len)
-
-    val rst = name?.let {
-        println(it.length)
-        10
-    }
-
-    println(rst)
+    println(length)
 }
