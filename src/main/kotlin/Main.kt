@@ -1,14 +1,15 @@
 fun main() {
     // 스코프 함수
-    // also -> 읽기 전용...
+    // apply => this를 받고 객체를 반환
+    // let => it를 받고 람다의 결과를 반환
+    // also => it를 받고 객체를 반환
+    // run => this를 받고 람다의 결과를 반환
 
-    val length = "Hello"
-        .also {
-            println("Before: $it")
-        }.uppercase()
-        .also {
-            println("After: $it")
-        }.length
+    // run
+    val num = 5
+    val rst = num.run {
+        this * 2 + 10
+    }
 
-    println(length)
+    println(rst)
 }
