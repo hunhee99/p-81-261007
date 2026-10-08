@@ -1,13 +1,8 @@
 fun main() {
-    // when 문 (switch 대체)
-    val day = 3
+    // 컬렉션 필터링
+    val numbers = listOf(1, 2, 3, 4, 5, 6)
 
-    val dayName = when (day) {
-        1 -> "Monday"
-        2 -> "Tuesday"
-        3 -> "Wednesday"
-        else -> "Invalid Day"
-    }
+    val rst = numbers.filter { it % 2 == 0 }
 
-    println("Day: $dayName")
+    rst.forEach { println(it) }
 }
