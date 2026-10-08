@@ -1,25 +1,10 @@
-open class Animal {
-    open fun eat(){
-        println("eat")
-    }
-}
-
-interface Pet {
-    fun play()
-}
-
-class Dog : Animal(), Pet {
-    override fun eat() {
-        TODO("Not yet implemented")
-    }
-
-    override fun play() {
-        TODO("Not yet implemented")
-    }
-
+class Person(
+    val name: String = ""
+){
 }
 
 fun main() {
-
+    val p = Person("Alice")
+    println(p.name)
 }
 
