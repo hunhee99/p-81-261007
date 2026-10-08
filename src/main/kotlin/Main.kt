@@ -1,18 +1,15 @@
 fun main() {
     // 스코프 함수
 
-    // 기존
-    val person1 = Person()
-    person1.name = "Bob"
-    person1.age = 509
+    val name: String? = "hello"
 
-    person1.prinInfo()
+    val len = name?.length ?: 0
+    println(len)
 
-    // apply
-    val person2 = Person().apply {
-        name = "Alice"
-        age = 30
+    val rst = name?.let {
+        println(it.length)
+        10
     }
 
-    person2.prinInfo()
+    println(rst)
 }
