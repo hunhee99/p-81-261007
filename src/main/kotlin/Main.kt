@@ -1,6 +1,25 @@
-fun main() {
-    // open 키워드
-
-    val dog = Dog()
-    dog.makeSound()
+open class Animal {
+    open fun eat(){
+        println("eat")
+    }
 }
+
+interface Pet {
+    fun play()
+}
+
+class Dog : Animal(), Pet {
+    override fun eat() {
+        TODO("Not yet implemented")
+    }
+
+    override fun play() {
+        TODO("Not yet implemented")
+    }
+
+}
+
+fun main() {
+
+}
+

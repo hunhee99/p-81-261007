@@ -1,3 +1,0 @@
-interface Animal {
-    fun makeSound()
-}
