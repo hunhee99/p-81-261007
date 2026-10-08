@@ -1,9 +1,6 @@
 fun main() {
-    // map, forEach
-    val names = listOf("Alice", "Bob", "Charlie")
+    // elvis 연산자 (?:)
+    val name: String? = null
 
-    names.map {
-        "Hello, $it"
-    }
-        .forEach(::println)
+    println("Hello, ${name ?: "Guest"}")
 }
