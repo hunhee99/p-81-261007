@@ -1,6 +1,8 @@
 fun main() {
-    // elvis 연산자 (?:)
-    val name: String? = null
+    // 타입 체크와 캐스팅
+    val obj: Any = "Hello"
 
-    println("Hello, ${name ?: "Guest"}")
+    if (obj is String) {
+        println(obj.length)
+    }
 }
